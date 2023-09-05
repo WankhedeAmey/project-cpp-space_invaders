@@ -659,7 +659,6 @@ int main(int argc, char* argv[]) {
                 bool overlap = sprite_overlap_check(bullet_sprite, game.bullets[bi].x, game.bullets[bi].y,
                                             alien_sprite, alien.x, alien.y);
                 if (overlap) {
-                    score += 10 * (4 - game.aliens[ai].type);
                     game.aliens[ai].type = ALIEN_DEAD;
                     game.aliens[ai].x -= (alien_death_sprite.width - alien_sprite.width) / 2;
                     game.bullets[bi] = game.bullets[game.num_bullets - 1];
